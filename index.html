@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="or">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+  <title>Chat</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ═══ ANIMATED BACKGROUND ═══ -->
+<div id="bg">
+  <div class="aurora a1"></div>
+  <div class="aurora a2"></div>
+  <div class="aurora a3"></div>
+  <div class="particle-field" id="particles"></div>
+  <div class="grid-lines"></div>
+</div>
+
+<!-- ═══ GOOD MORNING SCREEN ═══ -->
+<div id="start-screen">
+  <div class="gm-card">
+    <div class="gm-sun">
+      <div class="sun-core"></div>
+      <div class="sun-ray r1"></div>
+      <div class="sun-ray r2"></div>
+      <div class="sun-ray r3"></div>
+      <div class="sun-ray r4"></div>
+      <div class="sun-ray r5"></div>
+      <div class="sun-ray r6"></div>
+      <div class="sun-ray r7"></div>
+      <div class="sun-ray r8"></div>
+    </div>
+    <div class="gm-text">
+      <p class="gm-label">🌅 Good Morning</p>
+      <p class="gm-name">Suna 💛</p>
+      <p class="gm-sub">Gote special message achhi tuma pain…</p>
+    </div>
+    <div class="gm-tap">
+      <span class="tap-ring"></span>
+      <span class="tap-ring r2"></span>
+      <span class="tap-dot"></span>
+    </div>
+    <p class="tap-label">Tap kara khuliba</p>
+  </div>
+</div>
+
+<!-- ═══ WHATSAPP UI ═══ -->
+<div id="app">
+
+  <div class="status-bar">
+    <span id="clock">9:41</span>
+    <span class="sb-right">▌▌▌ ● 🔋</span>
+  </div>
+
+  <div class="chat-header">
+    <div class="back-btn">&#8592;</div>
+    <!-- Profile pic from server -->
+    <div class="avatar-wrap">
+      <img class="avatar-img" src="devi.jpg" alt="D"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="avatar-fallback">ଦ</div>
+      <div class="online-dot"></div>
+    </div>
+    <div class="header-info">
+      <div class="hname">Devi</div>
+      <div class="hstatus" id="header-status">online</div>
+    </div>
+    <div class="hicons">
+      <span>📞</span>
+      <span>⋮</span>
+    </div>
+  </div>
+
+  <div class="chat-area" id="chat-area"></div>
+
+  <div class="input-bar">
+    <div class="emoji-btn">😊</div>
+    <div class="input-fake">Message likha…</div>
+    <div class="mic-btn">🎤</div>
+  </div>
+
+</div>
+
+<!-- ═══ CHOICE ═══ -->
+<div id="choice-overlay" class="hidden">
+  <div class="choice-box">
+    <p class="c-prompt">ତୁ କ'ଣ କହିବୁ?</p>
+    <button class="cbtn yes-btn" onclick="handleChoice('yes')">ହଁ, ମିଳିବ 🙂</button>
+    <button class="cbtn no-btn"  onclick="handleChoice('no')">ଦେଖିବା 😅</button>
+  </div>
+</div>
+
+<!-- ═══ REPLY ═══ -->
+<div id="reply-overlay" class="hidden">
+  <div class="reply-box">
+    <div class="reply-msg" id="reply-text"></div>
+  </div>
+</div>
+
+<audio id="bg-music" src="aaa.mp3" loop></audio>
+<script src="script.js"></script>
+</body>
+</html>
